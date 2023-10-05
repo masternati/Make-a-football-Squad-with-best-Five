@@ -4,15 +4,18 @@
    
 // });
 
-document.getElementById('calculate').addEventListener('click',function claculateExpenses(){
+function calculated() {
    const playerValue = document.getElementById('player-value');
    const playerValueString = playerValue.value;
    const playerValueAmount = parseInt(playerValueString);
-
    const calculate = playerValueAmount * 5;
+   return calculate;
+};
+
+document.getElementById('calculate').addEventListener('click',function claculateExpenses(){
 
    const expenses = document.getElementById('expenses');
-   expenses.innerText = calculate;
+   expenses.innerText = calculated();
    return expenses;
    
 });
@@ -26,13 +29,9 @@ document.getElementById('calculate-total').addEventListener('click', function ()
    const cochString = coch.value;
    const cochAmount = parseInt(cochString);
 
-   // const expence = claculateExpenses();
-
-
-   const calculateTotal = managerAmount + cochAmount;
+   const calculateTotal = managerAmount + cochAmount + calculated();;
 
    const totalAmount = document.getElementById('total');
    totalAmount.innerText = calculateTotal;
-
 
 });
