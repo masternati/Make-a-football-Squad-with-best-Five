@@ -5,16 +5,34 @@
 // });
 
 function selectPlayer(){
-   const player = document.getElementsByClassName('best-five')[0].innerHTML;
-   console.log(player);
-   return player;
+   const player = document.getElementsByClassName('best-players')[0].innerHTML;
+   
+   const bestFive = document.getElementById('best-five-selected');
+   bestFive.innerText = player;
+   console.log(bestFive);
+   return bestFive;
 };
 
+// selectPlayer();
+
 document.getElementById('select').addEventListener('click', function(){
-   const bestFive = document.getElementById('best-five');
-   bestFive.innerText = selectPlayer();
+   const playerFive = selectPlayer();
+   return playerFive;
 
 });
+
+document.getElementById('selects').addEventListener('click', function(){
+   const playerFive = selectPlayer();
+   return playerFive;
+
+});
+
+document.getElementById('selected').addEventListener('click', function(){
+   const playerFive = selectPlayer();
+   return playerFive;
+
+});
+
 
 function calculated() {
    const playerValue = document.getElementById('player-value');
