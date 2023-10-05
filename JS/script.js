@@ -4,6 +4,18 @@
    
 // });
 
+function selectPlayer(){
+   const player = document.getElementsByClassName('best-five')[0].innerHTML;
+   console.log(player);
+   return player;
+};
+
+document.getElementById('select').addEventListener('click', function(){
+   const bestFive = document.getElementById('best-five');
+   bestFive.innerText = selectPlayer();
+
+});
+
 function calculated() {
    const playerValue = document.getElementById('player-value');
    const playerValueString = playerValue.value;
