@@ -16,3 +16,23 @@ document.getElementById('calculate').addEventListener('click',function claculate
    return expenses;
    
 });
+
+document.getElementById('calculate-total').addEventListener('click', function () {
+   const manager = document.getElementById('manager');
+   const managerString = manager.value;
+   const managerAmount = parseInt(managerString);
+
+   const coch = document.getElementById('coch');
+   const cochString = coch.value;
+   const cochAmount = parseInt(cochString);
+
+   // const expence = claculateExpenses();
+
+
+   const calculateTotal = managerAmount + cochAmount;
+
+   const totalAmount = document.getElementById('total');
+   totalAmount.innerText = calculateTotal;
+
+
+});
